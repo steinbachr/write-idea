@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 import csv
 import random
 import requests
-import ipdb
 
 
 #in the future, we can have this passed in to the program from command line
