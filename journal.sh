@@ -9,7 +9,10 @@ else
     FILE=$1
 fi
 
-WORDS=`python write_idea.py`;
+DIR_REL="`dirname \"$0\"`"
+DIR_ABS="`( cd \"$DIR_REL\" && pwd )`"
+SCRIPT="$DIR_ABS/write_idea.py"
+WORDS=`python $SCRIPT`;
 
 echo "$WORDS" >> $FILE;
 vim $FILE;
